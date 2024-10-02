@@ -13,15 +13,13 @@ const teachers = [
 const fourthTeacher = teachers[3];
 
 // 2. Sostituisci il quinto insegnante nell'array teachers con 'Patrick'
-teachers[teachers.indexOf('Carlo')] = 'Patrick'
+teachers.splice(4,1,'Patrick')
 
 // 3. Rimuovi l'ultimo insegnante dall'array e salvalo nella variabile lastTeacher qui sotto
-const lastTeacher = 'Luca';
-teachers.pop(lastTeacher)
+const lastTeacher = teachers.pop();
 
 // 4. Rimuovi il primo insegnante dall'array e salvalo nella variabile firstTeacher qui sotto
-const firstTeacher = 'Nathan';
-teachers.shift(firstTeacher)
+const firstTeacher = teachers.shift();
 
 // 5. Aggiungi un insegnante di nome 'Vanessa' alla fine dell'array teachers
 teachers.push('Vanessa')
@@ -36,11 +34,17 @@ const isFabioPresent = teachers.includes('Fabio');
 // 8. Trova l'indice dell'insegnante 'Lewis' nell'array teachers
 // e salvalo nella variabile lewisIndex
 const lewisIndex = teachers.indexOf('Lewis');
-
 // 9. Unisci tutti gli insegnanti nell'array teachers in una stringa
 // separata da virgole e salvala nella variabile teachersString
-const teachersString = teachers.toString();
+const teachersString = teachers.join();
 
 // 10. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
-const isTeachersEmpty = teachers.length;
+const isTeachersEmpty = [];
+if (isTeachersEmpty === 0) {
+  console.log('The array is empty');
+  
+} else  {
+  console.log('The array is not empty');
+  
+}
